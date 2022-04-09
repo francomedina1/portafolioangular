@@ -1,0 +1,172 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "fullName": "Franco ",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "image": "assets/img/banner.jpg",
+      "id": 2
+    },
+    {
+      "fullName": "Franco Medina",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "image": "\"assets/img/banner.jpg\"",
+      "id": 3
+    },
+    {
+      "fullName": "Franco Medina",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "image": "\"assets/img/banner.jpg\"",
+      "id": 4
+    },
+    {
+      "fullName": "Franco ",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "image": "\"assets/img/banner.jpg\"",
+      "id": 5
+    },
+    {
+      "fullName": "Franco ",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "image": "assests/img/banner.jpg",
+      "id": 6
+    },
+    {
+      "fullName": "Franco ",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "image": "assets/img/banner.jpg",
+      "id": 7
+    },
+    {
+      "fullName": "Franco ",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "bannerimage": "assets/img/banner.jpg",
+      "id": 8
+    },
+    {
+      "fullName": "Franco Medina",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "bannerimage": "assets/img/banner.jpg",
+      "id": 9
+    },
+    {
+      "fullName": "Franco ",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "bannerimage": "assets/img/banner.jpg",
+      "id": 10
+    },
+    {
+      "fullName": "Franco Medina",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "bannerimage": "assets/img/banner.jpg",
+      "id": 11
+    },
+    {
+      "fullName": "Franco ",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "bannerimage": "assets/img/banner.jpg",
+      "id": 12
+    },
+    {
+      "fullName": "Franco Medina",
+      "position": "Full Stack Developer Jr. y Contador Publico Nacional",
+      "description": "Como recién graduado, me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas fácilmente.Soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.",
+      "bannerimage": "assets/img/banner.jpg",
+      "id": 13
+    },
+    {
+      "title": "lksdhlaksd",
+      "icono": "aisaida",
+      "id": 14
+    },
+    {
+      "title": "portugues",
+      "icono": "icon solid fa-language",
+      "id": 15
+    },
+    {
+      "title": "aleman",
+      "icono": "icon solid fa-language",
+      "id": 16
+    },
+    {
+      "title": "portugues",
+      "icono": "icon solid fa-language",
+      "id": 17
+    },
+    {
+      "title": "portugues",
+      "icono": "icon solid fa-language",
+      "id": 18
+    },
+    {
+      "titulo": "jhgj",
+      "descripcion": "bhn",
+      "imagen": "mmnbhj,b",
+      "id": 19
+    },
+    {
+      "titulo": "efawfewa",
+      "descripcion": "aefwae",
+      "imagen": "awefwaef",
+      "id": 20
+    },
+    {
+      "titulo": "jhvhjdfsg",
+      "descripcion": "sfs",
+      "imagen": "luhjscljch",
+      "id": 21
+    },
+    {
+      "titulo": "jhghjb",
+      "descripcion": "gujhjk",
+      "imagen": "jhuijh",
+      "id": 22
+    },
+    {
+      "title": "aleman",
+      "icono": "icon solid fa-language",
+      "id": 23
+    },
+    {
+      "title": "aleman",
+      "icono": "icon solid fa-language",
+      "id": 24
+    },
+    {
+      "title": "aleman",
+      "icono": "icon solid fa-language",
+      "id": 25
+    },
+    {
+      "title": "as",
+      "icono": "icon solid fa-language",
+      "id": 26
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,81 @@
+<section id="study">
+    <div class="container">
+        <h1>Estudios <button *ngIf="usuarioAutenticado" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalestudios">Add <i class="fas fa-plus"></i></button></h1>
+        <div class="features">
+           <article *ngFor="let item of studyList">
+            <img style="width:100px; height:100px;"   [src]="item.img" alt="" />
+            <div class="inner">
+                <h4>{{item.title}}</h4>
+                <p>{{item.school}}</p>
+                <button  *ngIf="usuarioAutenticado" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirmarestudios"> Eliminar Registro <i class="fas fa-trash"></i></button>
+              </div>
+            </article>
+            
+              <!-- Modal -->
+              <div class="modal fade" id="modalestudios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Agregar Experiencia</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form [formGroup]="form">
+                        <div class="mb-3">
+                          <label for="titulo" class="form-label">Titulo</label>
+                          <input type="text" class="form-control" id="titulo" formControlName="titulo">
+                          <div *ngIf="titulo?.invalid && (titulo?.dirty || titulo?.touched)">
+                            <div *ngIf="titulo?.errors?.['required']" class="text-danger">
+                              El titulo es obligatorio.
+                            </div>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                          <label for="descripcion" class="form-label">Descripcion</label>
+                          <input type="text" class="form-control" id="descripcion" formControlName="descripcion">
+                          <div *ngIf="descripcion?.invalid && (descripcion?.dirty || descripcion?.touched)">
+                              <div *ngIf="descripcion?.errors?.['required']" class="text-danger">
+                                  la descripcion es obligatoria.
+                              </div>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="imagen" class="form-label">imagen</label>
+                          <input type="text" class="form-control" id="imagen" formControlName="imagen">
+                          <div *ngIf="imagen?.invalid && (imagen?.dirty || imagen?.touched)">
+                              <div *ngIf="imagen?.errors?.['required']" class="text-danger">
+                                  la imagen es obligatoria.
+                              </div>
+                          </div>
+                        </div>
+                    </form>    
+                    </div>
+                  <div class="modal-footer">
+                <button type="button" id="cerrarModalestudio" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"(click)="agregarestudio()" >Save changes</button>
+                  </div>
+                 </div>
+               </div>
+              </div> 
+
+
+            <div class="modal" id="confirmarestudios" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Eliminara Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>¿Esta seguro?.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">SI</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+  </div>
+</div>
+</section>

@@ -1,0 +1,75 @@
+<section id="aboutme">
+    <div class="image main" data-position="center">
+        <img [src]="datosPersonales.bannerimage" alt="" />
+    </div>
+    <div class="container">
+        <header class="major">
+            <h2>Hola!!!!!    Soy {{datosPersonales.fullName}} </h2>
+            <p></p>
+            <h1> {{datosPersonales.position}} </h1>
+        </header>
+        <p>{{datosPersonales.description}}</p>
+
+    </div>
+<!-- Button trigger modal -->
+<button *ngIf="usuarioAutenticado" type="button"  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#aboutmeModal" (click)="mostrarDatosEncabezado()">
+  Editar Aboutme
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="aboutmeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Aboutme</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Apellido y Nombre</label>
+            <input type="text" class="form-control" id="fullName" formControlName="fullName">
+            <div *ngIf="fullName?.invalid && (fullName?.dirty || fullName?.touched)">
+                <div *ngIf="fullName?.errors?.['required']" class="text-danger">
+                    El apellido y nombre es obligatorio.
+                </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="Titulos" class="form-label">Titulos</label>
+            <input type="text" class="form-control" id="position" formControlName="position">
+            <div *ngIf="position?.invalid && (position?.dirty || position?.touched)">
+              <div *ngIf="position?.errors?.['required']" class="text-danger">
+                  Ingresar la posicion  es obligatorio.
+              </div>
+            </div>  
+          </div>
+          <div class="mb-3">
+            <label for="Aboutme" class="form-label">Aboutme</label>
+            <input type="text" class="form-control" id="description" formControlName="description">
+            <div *ngIf="description?.invalid && (description?.dirty || description?.touched)">
+              <div *ngIf="description?.errors?.['required']" class="text-danger">
+                  La decripcion acerca de mi  es obligatorio.
+              </div>
+            </div>  
+          </div>
+          <div class="mb-3">
+            <label for="bannerimage" class="form-label">BannerImage </label>
+            <input type="text" class="form-control" id="bannerimage" formControlName="bannerimage">
+            <div *ngIf="bannerimage?.invalid && (bannerimage?.dirty || bannerimage?.touched)">
+              <div *ngIf="bannerimage?.errors?.['required']" class="text-danger">
+                  La imagen de banner es obligatorio.
+              </div>
+            </div>  
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cerrarModalEncabezado" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)="guardarEncabezado()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+

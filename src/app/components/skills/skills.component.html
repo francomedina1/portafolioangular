@@ -1,0 +1,66 @@
+<section id="skills">
+  <div class="container">
+    <h1>Aptitudes <button *ngIf="usuarioAutenticado" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add <i class="fas fa-plus"></i></button></h1>
+    <ul class="feature-icons">
+      <li *ngFor="let item of skillsList" [class]="item.icono">{{item.title}} <button  *ngIf="usuarioAutenticado" type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#confirmar">  <i class="fas fa-trash"></i></button>
+      <div class="modal" id="confirmar" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Eliminara Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>¿Esta seguro?.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="cerrarModalskill" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="eliminarskill(item.title)"> SI</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>                              
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Agregar Aptitud</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <div class="mb-3">
+                      <label for="icono" class="form-label">icono de fontawesome</label>
+                      <input type="text" class="form-control" id="icono" formControlName="icono">
+                      <div *ngIf="icono?.invalid && (icono?.dirty || icono?.touched)">
+                          <div *ngIf="icono?.errors?.['required']" class="text-danger">
+                              El icono es obligatorio.
+                          </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="title" class="form-label">title</label>
+                      <input type="text" class="form-control" id="title" formControlName="title">
+                      <div *ngIf="title?.invalid && (title?.dirty || title?.touched)">
+                          <div *ngIf="title?.errors?.['required']" class="text-danger">
+                              El title es obligatorio.
+                          </div>
+                        </div>
+                    </div>
+                </form>    
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="cerrarModalskills" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="agregarskill()">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    </div>
+</section>
+

@@ -1,0 +1,62 @@
+{
+	"skills": [
+		{
+			"icono": "icon solid fa-language",
+			"title": "Español"
+			 
+        },		{
+			"icono": "icon solid fa-language" ,
+			"title": "Ingles"
+			 
+        },		{
+			"icono": "icon solid fa-language",
+			"title": "Italiano "
+			 
+        },		{
+			"icono": "icon brands fa-java",
+			"title": "Java"
+			 
+        },		{
+			"icono": "icon brands fa-js",
+			"title": "Javascrip"
+			 
+        },		{
+			"icono": "icon brands fa-python",
+			"title": "Python"
+			 
+        },		{
+			"icono": "icon brands fa-angular",
+			"title": "Angular"
+			 
+        },		{
+			"icono": "icon brands fa-bootstrap",
+			"title": "Bootstrap"
+			 
+        },		{
+			"icono": "icon solid fa-database",
+			"title": "MySql"
+			 
+        },		{
+			"icono": "icon solid fa-leaf",
+			"title": "Bootspring"
+			 
+        },		{
+			"icono": "icon brands fa-python",
+			"title": "Django"
+			 
+        },		{
+			"icono": "icon brands fa-github",
+			"title": "Git + GitHub"
+			 
+        },		{
+			"icono": "icon solid fa-file-invoice-dollar",
+			"title": "Contabilidad"
+			 
+        },
+                {
+			"icono": "icon solid fa-chart-area",
+			"title": "Analisis de Datos"
+			 
+        }
+	]
+}

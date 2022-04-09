@@ -1,0 +1,26 @@
+
+{
+    "education": [
+		{
+			"school": "Universidad Nacional del Sur",
+			"title": "Contador Publico nacional",
+			"img": "assets/img/uns.png"
+		},
+        {
+			"school": "Universidad de Michigan",
+			"title": "Python",
+			"img": "assets/img/edx.png"
+		},
+        {
+			"school": "IBM",
+			"title": "Analisis de Datos con Python",
+			"img": "assets/img/edx.png"
+		},
+        {
+			"school": "Argentina Programa",
+			"title": "Desarrollador Fullstack Web Jr",
+			"img": "assets/img/ARGENTINA-PROGRAMA.jpg"
+		}
+		
+	]
+}

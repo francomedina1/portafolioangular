@@ -1,0 +1,26 @@
+{
+    "proyectos": [
+		{
+			"title": "Proyecto Universidad",
+			"img": "assets/img/pythondjango.png",
+			"descripcion": "Proyecto Django .Permite registrar a los alumnos en diferentes clases y cursos.Como tambien un modulo para enviar mails"
+		},		{
+			"title": "Proyecto Juegos",
+			"img": "assets/img/juegoahoracado.jpg",
+			"descripcion": "Juego de adivinar el numero , Juego del ahorcado y naive search."
+		},		{
+			"title": "Proyecto Analisis de Datos",
+			"img": "assets/img/analisisdedatos.jpg",
+			"descripcion":"Analisis de datos utilizando Jupyter notebook . Utiliando librerias como Pandas,Scikilearn,numpy entre otras."
+		},		{
+			"title": "Proyecto Excel",
+			"img": "assets/img/excel.jpg",
+			"descripcion": "Manipulacion de tablas de Excel."
+		},		{
+			"title": "Proyecto Facturacion",
+			"img": "assets/img/py.jpg",
+			"descripcion": "Programa de facturacion en un bar."
+		}
+		
+	]
+}
