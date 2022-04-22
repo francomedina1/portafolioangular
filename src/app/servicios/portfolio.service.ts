@@ -10,10 +10,14 @@ import { Estudio } from '../entidades/estudio';
   providedIn: 'root'
 })
 export class PortfolioService {
+
   constructor(private http:HttpClient) { }
 
   obtenerDatosPersona():Observable<any>{
-    return this.http.get('./assets/data/persona.json');
+    return this.http.get("http://localhost:8080/persona");
+  }
+  editarDatosPersona(persona:Persona):Observable<any>{
+    return  this.http.post("http://localhost:8080/persona",persona);
   }
 
   obtenerDatosSkills():Observable<any>{
@@ -28,9 +32,7 @@ export class PortfolioService {
     return this.http.get('./assets/data/proyectos.json');
   }
 
-  editarDatosPersona(persona:Persona):Observable<any>{
-    return  this.http.post('http://localhost:3000/posts',persona);
-  }
+
 
   agregarskills(skills:Skills):Observable<any>{
     return  this.http.post('http://localhost:3000/posts',skills);

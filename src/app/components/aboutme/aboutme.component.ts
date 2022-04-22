@@ -38,13 +38,13 @@ guardarEncabezado(){
     let position=this.form.controls["position"].value;
     let description=this.form.controls["description"].value;
     let bannerimage=this.form.controls["bannerimage"].value;
-    let personaEditar=new Persona(fullName,position,description,bannerimage);
+    let personaEditar=new Persona(this.datosPersonales.id,fullName,position,description,bannerimage);
     this.datosPortfolio.editarDatosPersona(personaEditar).subscribe(data=>{
       this.datosPersonales=personaEditar;
       this.form.reset();
       document.getElementById("cerrarModalEncabezado")?.click();
     },
-    error => {
+    error  => {
       alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");
     })
   }
