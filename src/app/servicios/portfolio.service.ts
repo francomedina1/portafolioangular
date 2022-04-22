@@ -13,17 +13,23 @@ export class PortfolioService {
 
   constructor(private http:HttpClient) { }
 
-  obtenerDatosPersona():Observable<any>{
-    return this.http.get("http://localhost:8080/persona");
+  obtenerDatosPersona():Observable<Persona[]>{
+    return this.http.get<Persona[]>('./assets/data/persona.json');
   }
-  editarDatosPersona(persona:Persona):Observable<any>{
-    return  this.http.post("http://localhost:8080/persona",persona);
+  editarDatosPersona(persona:Persona):Observable<Persona>{
+    return  this.http.post<Persona>("http://localhost:8080/persona",persona);
   }
 
   obtenerDatosSkills():Observable<any>{
-    return this.http.get('./assets/data/skills.json');
+    return this.http.get('http://localhost:8080/skills');
+  }
+  agregarskills(skills:Skills):Observable<any>{
+    return  this.http.post('http://localhost:8080/skills',skills);
   }
 
+  eliminarskills(id:number):Observable<any>{
+    return  this.http.delete('http://localhost:8080/skills'+"/"+id);
+  }
   obtenerDatosStudy():Observable<any>{
     return this.http.get('./assets/data/estudios.json');
   }
@@ -32,15 +38,6 @@ export class PortfolioService {
     return this.http.get('./assets/data/proyectos.json');
   }
 
-
-
-  agregarskills(skills:Skills):Observable<any>{
-    return  this.http.post('http://localhost:3000/posts',skills);
-  }
-
-  eliminarskills(title:any):Observable<any>{
-    return  this.http.delete('http://localhost:3000/post',title);
-  }
   agregarexperienciaa(experiencia:Experiencia):Observable<any>{
     return  this.http.post('http://localhost:3000/posts',experiencia);
   }

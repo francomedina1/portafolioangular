@@ -3,7 +3,8 @@
     <h1>Aptitudes <button *ngIf="usuarioAutenticado" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add <i class="fas fa-plus"></i></button></h1>
     <ul class="feature-icons">
       <li *ngFor="let item of skillsList" [class]="item.icono">{{item.title}} <button  *ngIf="usuarioAutenticado" type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#confirmar">  <i class="fas fa-trash"></i></button>
-      <div class="modal" id="confirmar" tabindex="-1">
+        <div hidden>{{item.id}}</div>
+        <div class="modal" id="confirmar" tabindex="-1">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -15,12 +16,12 @@
               </div>
               <div class="modal-footer">
                 <button type="button" id="cerrarModalskill" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary" (click)="eliminarskill(item.title)"> SI</button>
+                <button type="button" class="btn btn-primary" (click)=" eliminarskill(item.id)"> SI</button>
               </div>
             </div>
           </div>
         </div>
-      </li>
+        </li>
     </ul>                              
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

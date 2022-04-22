@@ -1,9 +1,11 @@
 export class Skills{
+    id:number;
     icono:string;
     title:string;
    
-   constructor(title:string, icono:string)
+   constructor(id:number , title:string, icono:string)
    {
+       this.id=id;
        this.title=title;
        this.icono=icono;
 

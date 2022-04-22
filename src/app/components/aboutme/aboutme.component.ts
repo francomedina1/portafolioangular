@@ -44,7 +44,7 @@ guardarEncabezado(){
       this.form.reset();
       document.getElementById("cerrarModalEncabezado")?.click();
     },
-    error  => {
+    error => {
       alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");
     })
   }

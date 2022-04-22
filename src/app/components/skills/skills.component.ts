@@ -25,12 +25,12 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosSkills().subscribe(data => {
-      this.skillsList=data["skills"];
+      this.skillsList=data;
     
     })
   }
-  eliminarskill(title:any){
-    this.datosPortfolio.eliminarskills(title).subscribe(data=>{
+  eliminarskill(id:number){
+    this.datosPortfolio.eliminarskills(id).subscribe(data=>{
       
       document.getElementById("cerrarModalskill")?.click();
     },
@@ -42,7 +42,7 @@ export class SkillsComponent implements OnInit {
     if (this.form.valid){
       let title=this.form.controls["title"].value;
       let icono=this.form.controls["icono"].value;
-      let skillsagregar=new Skills(title , icono);
+      let skillsagregar=new Skills(this.skillsList.id ,title , icono);
       this.datosPortfolio.agregarskills(skillsagregar).subscribe(data=>{
         this.skillsList.push(skillsagregar);
         this.form.reset();
