@@ -25,8 +25,17 @@ export class ExperienceComponent implements OnInit {
      }
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosProyectos().subscribe(data => {
-      this.proyectosList=data["proyectos"];
+      this.proyectosList=data;
     
+    })
+  }
+  eliminarexperiencia(id:number){
+    this.datosPortfolio.eliminarExperiencias(id).subscribe(data=>{
+      
+      document.getElementById("cerrarModalskill")?.click();
+    },
+    error => {
+      alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");
     })
   }
   agregarexperiencia(){
@@ -34,7 +43,7 @@ export class ExperienceComponent implements OnInit {
       let titulo=this.form.controls["titulo"].value;
       let descripcion=this.form.controls["descripcion"].value;
       let imagen=this.form.controls["imagen"].value;
-      let experienciaagregar=new Experiencia(titulo, descripcion , imagen);
+      let experienciaagregar=new Experiencia(this.proyectosList.id,titulo, descripcion , imagen);
       this.datosPortfolio.agregarexperienciaa(experienciaagregar).subscribe(data=>{
         this.proyectosList.push(experienciaagregar);
         this.form.reset();

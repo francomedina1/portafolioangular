@@ -3,11 +3,28 @@
         <h1>Estudios <button *ngIf="usuarioAutenticado" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalestudios">Add <i class="fas fa-plus"></i></button></h1>
         <div class="features">
            <article *ngFor="let item of studyList">
-            <img style="width:100px; height:100px;"   [src]="item.img" alt="" />
+            <img style="width:100px; height:100px;"   [src]="item.imagen" alt="" />
             <div class="inner">
-                <h4>{{item.title}}</h4>
-                <p>{{item.school}}</p>
+                <h4>{{item.titulo}}</h4>
+                <p>{{item.descripcion}}</p>
                 <button  *ngIf="usuarioAutenticado" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirmarestudios"> Eliminar Registro <i class="fas fa-trash"></i></button>
+              </div>
+              <div class="modal" id="confirmarestudios" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Eliminara Registro</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>¿Esta seguro?.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" (click)=" eliminarEstudio(item.id)">SI</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </article>
             
@@ -59,23 +76,7 @@
               </div> 
 
 
-            <div class="modal" id="confirmarestudios" tabindex="-1">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">Eliminara Registro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>¿Esta seguro?.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">SI</button>
-                  </div>
-                </div>
-              </div>
-          </div>
+
   </div>
 </div>
 </section>

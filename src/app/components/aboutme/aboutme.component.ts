@@ -28,6 +28,7 @@ export class AboutmeComponent implements OnInit {
     this.datosPortfolio.obtenerDatosPersona().subscribe(data => {
       this.datosPersonales=data;
       console.log(this.datosPersonales);
+      
     })
   }
 
@@ -40,10 +41,11 @@ guardarEncabezado(){
     let bannerimage=this.form.controls["bannerimage"].value;
     let personaEditar=new Persona(this.datosPersonales.id,fullName,position,description,bannerimage);
     this.datosPortfolio.editarDatosPersona(personaEditar).subscribe(data=>{
-      this.datosPersonales=personaEditar;
-      this.form.reset();
-      document.getElementById("cerrarModalEncabezado")?.click();
-    },
+       this.datosPersonales.push(personaEditar);
+      console.log(personaEditar)
+       this.form.reset();
+       document.getElementById("cerrarModalEncabezado")?.click();
+     },
     error => {
       alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");
     })
@@ -56,12 +58,6 @@ guardarEncabezado(){
   
 }
 
-mostrarDatosEncabezado(){
-  this.form.get("fullName")?.setValue(this.datosPersonales.fullName);
-  this.form.get("position")?.setValue(this.datosPersonales.position);
-  this.form.get("description")?.setValue(this.datosPersonales.description);
-  this.form.get("bannerimage")?.setValue(this.datosPersonales.bannerimage);
-}
 
 get fullName()
 {

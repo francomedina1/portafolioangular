@@ -24,8 +24,18 @@ export class StudyComponent implements OnInit {
      }
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosStudy().subscribe(data => {
-      this.studyList=data["education"];
+      this.studyList=data;
+      
     
+    })
+  }
+  eliminarEstudio(id:number){
+    this.datosPortfolio.eliminarEstudio(id).subscribe(data=>{
+      
+      document.getElementById("cerrarModalskill")?.click();
+    },
+    error => {
+      alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");
     })
   }
   agregarestudio(){
@@ -33,7 +43,7 @@ export class StudyComponent implements OnInit {
       let titulo=this.form.controls["titulo"].value;
       let descripcion=this.form.controls["descripcion"].value;
       let imagen=this.form.controls["imagen"].value;
-      let estudioagregar=new Estudio(titulo, descripcion , imagen);
+      let estudioagregar=new Estudio(this.studyList.id ,titulo, descripcion , imagen);
       this.datosPortfolio.agregarestudio(estudioagregar).subscribe(data=>{
         this.studyList.push(estudioagregar);
         this.form.reset();

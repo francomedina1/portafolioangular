@@ -1,20 +1,24 @@
-<section id="aboutme">
+
+<section   *ngFor="let item of datosPersonales"   id="aboutme">
     <div class="image main" data-position="center">
-        <img [src]="datosPersonales.bannerimage" alt="" />
+      
+        <img [src]="item.bannerimage" alt="" />
     </div>
-    <div class="container">
+    <div  class="container">
         <header class="major">
-            <h2>Hola!!!!!    Soy {{datosPersonales.fullName}} </h2>
+            <h2>Hola!!!!!    Soy {{item.fullName}} </h2>
             <p></p>
-            <h1> {{datosPersonales.position}} </h1>
+            <h1> {{item.position}} </h1>
         </header>
-        <p>{{datosPersonales.description}}</p>
+        <p>{{item.description}}</p>
 
     </div>
+</section>
 <!-- Button trigger modal -->
-<button *ngIf="usuarioAutenticado" type="button"  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#aboutmeModal" (click)="mostrarDatosEncabezado()">
+<button *ngIf="usuarioAutenticado" type="button"  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#aboutmeModal">
   Editar Aboutme
 </button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="aboutmeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -71,5 +75,5 @@
     </div>
   </div>
 </div>
-</section>
+
 

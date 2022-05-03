@@ -1,0 +1,29 @@
+ <h1>Iniciar Sesion</h1>
+ <form  [formGroup]="form"class="m-5" (ngSubmit)="onEnviar($event)">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Usuario</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text"></div>
+      <div *ngIf="Email?.invalid && (Email?.dirty || Email?.touched)">
+        <div *ngIf="Email?.errors?.['required']" class="text-danger">
+            El email es requerido.
+        </div>
+        <div *ngIf="Email?.errors?.['email']" class="text-danger">
+            El email debe tener un formato valido.
+        </div>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input type="password" formControlName="password"  class="form-control" id="exampleInputPassword1">
+      <div *ngIf="Password?.invalid && (Password?.dirty || Password?.touched)">
+        <div *ngIf="Password?.errors?.['required']" class="text-danger">
+            El Password es requerido.
+        </div>
+        <div *ngIf="Email?.errors?.['minLength']" class="text-danger">
+            El Password debe tener al menos 8 caracteres.
+        </div>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>

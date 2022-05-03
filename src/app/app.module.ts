@@ -11,6 +11,9 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { BarralateralComponent } from './components/barralateral/barralateral.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     ExperienceComponent,
     SkillsComponent,
-    AboutmeComponent
+    AboutmeComponent,
+    IniciarSesionComponent,
+    PortfolioComponent,
+    BarralateralComponent
   ],
   imports: [
     BrowserModule,
