@@ -29,10 +29,10 @@ export class StudyComponent implements OnInit {
     
     })
   }
-  eliminarEstudio(id:number){
-    this.datosPortfolio.eliminarEstudio(id).subscribe(data=>{
+  eliminarEstudio(item:Estudio){
+    this.datosPortfolio.eliminarEstudio(item.id).subscribe(data=>{
       
-      document.getElementById("cerrarModalskill")?.click();
+      this.studyList.splice(this.studyList.indexOf(item),1);
     },
     error => {
       alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");

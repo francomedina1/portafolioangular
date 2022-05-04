@@ -29,13 +29,13 @@ export class SkillsComponent implements OnInit {
     
     })
   }
-  eliminarskill(id:number){
-    this.datosPortfolio.eliminarskills(id).subscribe(data=>{
+  eliminarskill(item:Skills){
+    this.datosPortfolio.eliminarskills(item.id).subscribe(data=>{
       
-      document.getElementById("cerrarModalskill")?.click();
+      this.skillsList.splice(this.skillsList.indexOf(item),1);
     },
     error => {
-      alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");
+      alert("Ups, no se pudo completar la operación.Actualize la pagina  e Intente nuevamente y/o consulte al administrador.");
     })
   }
   agregarskill(){
@@ -47,6 +47,8 @@ export class SkillsComponent implements OnInit {
         this.skillsList.push(skillsagregar);
         this.form.reset();
         document.getElementById("cerrarModalskills")?.click();
+      
+      
       },
       error => {
         alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");

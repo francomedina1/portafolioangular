@@ -1,16 +1,17 @@
 
-<section   *ngFor="let item of datosPersonales"   id="aboutme">
+<section   id="aboutme">
     <div class="image main" data-position="center">
       
-        <img [src]="item.bannerimage" alt="" />
+        <img [src]="datosPersonales.bannerimage" alt="" />
+        
     </div>
     <div  class="container">
         <header class="major">
-            <h2>Hola!!!!!    Soy {{item.fullName}} </h2>
+            <h2>Hola!!!!!    Soy {{datosPersonales.fullName}} </h2>
             <p></p>
-            <h1> {{item.position}} </h1>
+            <h1> {{datosPersonales.position}} </h1>
         </header>
-        <p>{{item.description}}</p>
+        <p>{{datosPersonales.description}}</p>
 
     </div>
 </section>

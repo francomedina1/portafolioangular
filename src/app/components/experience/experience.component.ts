@@ -29,10 +29,10 @@ export class ExperienceComponent implements OnInit {
     
     })
   }
-  eliminarexperiencia(id:number){
-    this.datosPortfolio.eliminarExperiencias(id).subscribe(data=>{
+  eliminarexperiencia(item:Experiencia){
+    this.datosPortfolio.eliminarExperiencias(item.id).subscribe(data=>{
       
-      document.getElementById("cerrarModalskill")?.click();
+      this.proyectosList.splice(this.proyectosList.indexOf(item),1);
     },
     error => {
       alert("Ups, no se pudo completar la operación. Intente nuevamente y/o consulte al administrador.");
