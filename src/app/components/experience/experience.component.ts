@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Experiencia } from 'src/app/entidades/experiencia';
@@ -12,7 +12,7 @@ import { Experiencia } from 'src/app/entidades/experiencia';
 export class ExperienceComponent implements OnInit {
 
   proyectosList:any;
-  usuarioAutenticado:boolean=true; //debe estar en  false
+  @Input('usuarioAutenticado')usuarioAutenticado=true; //debe estar en  false
   form!:FormGroup;
 
   constructor(private datosPortfolio:PortfolioService ,private formBuilder:FormBuilder) {

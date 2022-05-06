@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { BarralateralComponent } from './components/barralateral/barralateral.component';
+import { PortfolioAdminComponent } from './portfolio-admin/portfolio-admin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BarralateralComponent } from './components/barralateral/barralateral.co
     AboutmeComponent,
     IniciarSesionComponent,
     PortfolioComponent,
-    BarralateralComponent
+    BarralateralComponent,
+    PortfolioAdminComponent
   ],
   imports: [
     BrowserModule,

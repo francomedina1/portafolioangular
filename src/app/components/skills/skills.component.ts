@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Skills } from 'src/app/entidades/skills';
@@ -12,7 +12,7 @@ import { Skills } from 'src/app/entidades/skills';
 export class SkillsComponent implements OnInit {
 
   skillsList:any;
-  usuarioAutenticado:boolean=true; //debe estar en  false
+  @Input('usuarioAutenticado')usuarioAutenticado=true; //debe estar en  false
   form!:FormGroup;
 
   constructor(private datosPortfolio:PortfolioService ,private formBuilder:FormBuilder) {

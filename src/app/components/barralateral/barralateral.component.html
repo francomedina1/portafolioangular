@@ -6,7 +6,8 @@
     </header>
     <nav id="nav">
         <ul>
-            <li><a href="iniciar-sesion"  >iniciar-sesion</a></li>
+            <li ><a  *ngIf="!usuarioAutenticado" href="iniciar-sesion"  >Iniciar-sesion</a></li>
+            <li ><a  *ngIf="usuarioAutenticado" href=""  >Cerrar-sesion</a></li>
             <li><a href="portfolio#aboutme"  >Acerca de mi</a></li>
             <li><a href="portfolio#study">Formacion Academica</a></li>
             <li><a href="portfolio#skills">Habilidades</a></li>

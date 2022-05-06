@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Persona } from 'src/app/entidades/aboutme';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { AutentificacionService } from 'src/app/servicios/autentificacion.service';
 @Component({
   selector: 'app-aboutme',
   templateUrl: './aboutme.component.html',
@@ -11,11 +11,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AboutmeComponent implements OnInit {
 
   datosPersonales:any;
-  usuarioAutenticado:boolean=true; //debe estar en  false
+  @Input('usuarioAutenticado')usuarioAutenticado=true; //debe estar en  false
   form!:FormGroup;
   
   
-  constructor(private datosPortfolio:PortfolioService ,private formBuilder:FormBuilder) {
+  constructor(private datosPortfolio:PortfolioService ,private auth:AutentificacionService ,private formBuilder:FormBuilder) {
     this.form=this.formBuilder.group({
       fullName:['',[Validators.required]],
       position:['',[Validators.required]],
@@ -27,7 +27,7 @@ export class AboutmeComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosPersona().subscribe(data => {
       this.datosPersonales=data;
-      console.log(this.datosPersonales);
+    
       
     })
   }

@@ -11,7 +11,7 @@ import { Estudio } from '../entidades/estudio';
 })
 export class PortfolioService {
 
-  url:string="http://localhost:8080";
+  url:string="https://portfoliofrancomedina.herokuapp.com ";
   //https://portfoliofrancomedina-89f9b.web.app/
   //https://portfoliofrancomedina.herokuapp.com/ 
 

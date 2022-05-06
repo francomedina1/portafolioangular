@@ -1,11 +1,11 @@
-<app-barralateral></app-barralateral>
+<app-barralateral [usuarioAutenticado]="false"></app-barralateral>
 
 <div id="wrapper">
     <div id="main">
-        <app-aboutme></app-aboutme>    
-        <app-study></app-study>
-        <app-skills></app-skills>
-        <app-experience></app-experience>
+        <app-aboutme [usuarioAutenticado]="false"></app-aboutme>    
+        <app-study [usuarioAutenticado]="false"></app-study>
+        <app-skills [usuarioAutenticado]="false"></app-skills>
+        <app-experience [usuarioAutenticado]="false"></app-experience>
         <app-contact></app-contact>
         <app-footer> </app-footer>
     </div>
