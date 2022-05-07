@@ -11,19 +11,18 @@ import { Estudio } from '../entidades/estudio';
 })
 export class PortfolioService {
 
-  url:string="https://portfoliofrancomedina.herokuapp.com ";
-  //https://portfoliofrancomedina-89f9b.web.app/
-  //https://portfoliofrancomedina.herokuapp.com/ 
+ 
+  
 
   constructor(private http:HttpClient) { }
 
 
 
   obtenerDatosPersona():Observable<any>{
-    return this.http.get(this.url+'/persona');
+    return this.http.get('https://portfoliofrancomedina.herokuapp.com/persona');
   }
   editarDatosPersona(persona:Persona):Observable<any>{
-    return  this.http.post(this.url+'/persona',persona);
+    return  this.http.post('https://portfoliofrancomedina.herokuapp.com/persona',persona);
     
   }
 
@@ -32,14 +31,14 @@ export class PortfolioService {
 
 
   obtenerDatosSkills():Observable<any>{
-    return this.http.get(this.url+'/skills');
+    return this.http.get('https://portfoliofrancomedina.herokuapp.com/skills');
   }
   agregarskills(skills:Skills):Observable<any>{
-    return  this.http.post(this.url+'/skills',skills);
+    return  this.http.post('https://portfoliofrancomedina.herokuapp.com/skills',skills);
   }
 
   eliminarskills(id:number):Observable<any>{
-    return  this.http.delete(this.url+'/skills'+"/"+id);
+    return  this.http.delete('https://portfoliofrancomedina.herokuapp.com/skills'+"/"+id);
   }
  
 
@@ -47,14 +46,14 @@ export class PortfolioService {
 
 
   obtenerDatosProyectos():Observable<any>{
-    return this.http.get(this.url+'/experiencia');
+    return this.http.get('https://portfoliofrancomedina.herokuapp.com/experiencia');
   }
 
   agregarexperienciaa(experiencia:Experiencia):Observable<any>{
-    return  this.http.post(this.url+'/experiencia',experiencia);
+    return  this.http.post('https://portfoliofrancomedina.herokuapp.com/experiencia',experiencia);
   }
   eliminarExperiencias(id:number):Observable<any>{
-    return  this.http.delete(this.url+'/experiencia'+"/"+id);
+    return  this.http.delete('https://portfoliofrancomedina.herokuapp.com/experiencia'+"/"+id);
   }
 
 
@@ -63,14 +62,14 @@ export class PortfolioService {
 
 
   obtenerDatosStudy():Observable<any>{
-    return this.http.get(this.url+'/estudios');
+    return this.http.get('https://portfoliofrancomedina.herokuapp.com/estudios');
   }
 
   agregarestudio(estudio:Estudio):Observable<any>{
-    return  this.http.post(this.url+'/estudios',estudio);
+    return  this.http.post('https://portfoliofrancomedina.herokuapp.com/estudios',estudio);
   }
   eliminarEstudio(id:number):Observable<any>{
-    return  this.http.delete(this.url+'/estudios'+"/"+id);
+    return  this.http.delete('https://portfoliofrancomedina.herokuapp.com/estudios'+"/"+id);
   }
 
 
